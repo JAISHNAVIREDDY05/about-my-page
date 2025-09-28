@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ABOUT - ME</title>
+  <title>My CV - Jaishnavi</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
@@ -31,13 +31,22 @@
       box-shadow: 0 8px 20px rgba(0,0,0,0.2);
       padding: 30px;
       width: 90%;
-      max-width: 700px;
+      max-width: 750px;
       text-align: center;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 4px solid #6a11cb;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
 
     h1 {
       color: #6a11cb;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
 
     h2 {
@@ -72,7 +81,7 @@
       display: none;
       margin-top: 20px;
       text-align: left;
-      padding: 15px;
+      padding: 20px;
       border-radius: 10px;
       background: #f1f5ff;
       box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
@@ -87,50 +96,64 @@
       from {opacity: 0; transform: translateY(10px);}
       to {opacity: 1; transform: translateY(0);}
     }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin: 8px 0;
+      font-size: 16px;
+    }
   </style>
 </head>
 <body>
   <div class="cv-container">
+    <!-- Profile Avatar -->
+    <img src="https://i.ibb.co/0y6Wb7Q/avatar.png" alt="Profile Picture" class="profile-pic">
+
     <h1>Jaishnavi</h1>
     <h2>2nd Year • CSE Student @ IIIT Manipur</h2>
 
     <!-- Buttons -->
     <div class="btn-group">
-      <button onclick="showSection('personal')">Personal Details</button>
-      <button onclick="showSection('education')">Education</button>
-      <button onclick="showSection('hobbies')">Hobbies</button>
-      <button onclick="showSection('contact')">Contact</button>
+      <button onclick="showSection('personal')">👩 Personal Details</button>
+      <button onclick="showSection('education')">📘 Education</button>
+      <button onclick="showSection('hobbies')">🎨 Hobbies</button>
+      <button onclick="showSection('contact')">📞 Contact</button>
     </div>
 
     <!-- Sections -->
     <div id="personal" class="content">
-      <h3> Personal Details</h3>
+      <h3>👩 Personal Details</h3>
       <p><b>Name:</b> Jaishnavi</p>
       <p><b>Year:</b> 2nd Year</p>
       <p><b>Branch:</b> CSE (Computer Science and Engineering)</p>
-      <p><b>City:</b> hydrebad</p>
+      <p><b>City:</b> Mityalaguda</p>
     </div>
 
     <div id="education" class="content">
-      <h3> Education</h3>
+      <h3>📘 Education</h3>
       <p>Currently studying at <b>IIIT Manipur</b>.</p>
       <p>Pursuing <b>B.Tech in Computer Science and Engineering</b>.</p>
     </div>
 
     <div id="hobbies" class="content">
-      <h3> Hobbies</h3>
+      <h3>🎨 Hobbies</h3>
       <ul>
-        <li>Reading Books</li>
-        <li>Exploring New Technologies</li>
-        <li>Music & Dance</li>
-        <li>Creative Writing</li>
+        <li>📖 Reading Books</li>
+        <li>💻 Exploring New Technologies</li>
+        <li>🎵 Music & Dance</li>
+        <li>📝 Creative Writing</li>
       </ul>
     </div>
 
     <div id="contact" class="content">
-      <h3>Contact</h3>
+      <h3>📞 Contact</h3>
       <p><b>Phone:</b> 6305450729</p>
-      <p><b>Email:</b> jaishnavi@email.com</p>
+      <p><b>Email:</b> yourmail@example.com</p>
+      <p>🌍 Let’s connect on <a href="https://github.com/" target="_blank">GitHub</a></p>
     </div>
   </div>
 
