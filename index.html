@@ -2,85 +2,148 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About Me - Jaishnavi</title>
+  <title>ABOUT - ME</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
-    
+
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(120deg, #6a11cb, #2575fc);
-      color: #fff;
+      background: linear-gradient(120deg, #ff758c, #ff7eb3, #6a11cb, #2575fc);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      color: #333;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
     }
 
-    .card {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(12px);
-      border-radius: 20px;
-      padding: 30px 40px;
-      max-width: 600px;
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .cv-container {
+      background: rgba(255,255,255,0.9);
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      padding: 30px;
       width: 90%;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
-      animation: fadeIn 1.5s ease-in-out;
+      max-width: 700px;
+      text-align: center;
     }
 
     h1 {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      background: linear-gradient(90deg, #ff9966, #ff5e62);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #6a11cb;
+      margin-bottom: 10px;
     }
 
-    .info {
-      margin: 15px 0;
-      padding: 15px;
-      border-left: 4px solid #ff9966;
-      background: rgba(255,255,255,0.1);
-      border-radius: 8px;
-      transition: transform 0.3s ease;
+    h2 {
+      font-weight: 400;
+      color: #444;
+      margin-top: 0;
     }
 
-    .info:hover {
-      transform: scale(1.03);
-      background: rgba(255,255,255,0.2);
+    .btn-group {
+      margin: 20px 0;
     }
 
-    .label {
-      font-weight: 700;
-      color: #ffd369;
+    button {
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      margin: 8px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 600;
+      transition: transform 0.2s ease, background 0.3s ease;
     }
 
-    footer {
+    button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(90deg, #ff758c, #ff7eb3);
+    }
+
+    .content {
+      display: none;
       margin-top: 20px;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #eee;
+      text-align: left;
+      padding: 15px;
+      border-radius: 10px;
+      background: #f1f5ff;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+      animation: fadeIn 0.5s ease;
+    }
+
+    .content.active {
+      display: block;
     }
 
     @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
+      from {opacity: 0; transform: translateY(10px);}
       to {opacity: 1; transform: translateY(0);}
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>About Me</h1>
-    <div class="info"><span class="label">Name:</span> Jaishnavi</div>
-    <div class="info"><span class="label">Year:</span> B-tech 2nd Year</div>
-    <div class="info"><span class="label">Branch:</span> CSE (Computer Science and Engineering)</div>
-    <div class="info"><span class="label">College:</span> IIIT Manipur</div>
-    <div class="info"><span class="label">City:</span> Mityalaguda</div>
-    <div class="info"><span class="label">Contact:</span> 6305450729</div>
-    <footer>✨ Created by Jaishnavi ✨</footer>
+  <div class="cv-container">
+    <h1>Jaishnavi</h1>
+    <h2>2nd Year • CSE Student @ IIIT Manipur</h2>
+
+    <!-- Buttons -->
+    <div class="btn-group">
+      <button onclick="showSection('personal')">Personal Details</button>
+      <button onclick="showSection('education')">Education</button>
+      <button onclick="showSection('hobbies')">Hobbies</button>
+      <button onclick="showSection('contact')">Contact</button>
+    </div>
+
+    <!-- Sections -->
+    <div id="personal" class="content">
+      <h3> Personal Details</h3>
+      <p><b>Name:</b> Jaishnavi</p>
+      <p><b>Year:</b> 2nd Year</p>
+      <p><b>Branch:</b> CSE (Computer Science and Engineering)</p>
+      <p><b>City:</b> hydrebad</p>
+    </div>
+
+    <div id="education" class="content">
+      <h3> Education</h3>
+      <p>Currently studying at <b>IIIT Manipur</b>.</p>
+      <p>Pursuing <b>B.Tech in Computer Science and Engineering</b>.</p>
+    </div>
+
+    <div id="hobbies" class="content">
+      <h3> Hobbies</h3>
+      <ul>
+        <li>Reading Books</li>
+        <li>Exploring New Technologies</li>
+        <li>Music & Dance</li>
+        <li>Creative Writing</li>
+      </ul>
+    </div>
+
+    <div id="contact" class="content">
+      <h3>Contact</h3>
+      <p><b>Phone:</b> 6305450729</p>
+      <p><b>Email:</b> jaishnavi@email.com</p>
+    </div>
   </div>
+
+  <script>
+    function showSection(id) {
+      // Hide all sections
+      document.querySelectorAll('.content').forEach(div => {
+        div.classList.remove('active');
+      });
+      // Show selected section
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
 </html>
 
